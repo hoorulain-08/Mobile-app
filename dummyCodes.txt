@@ -1,0 +1,307 @@
+
+// This code is here below of chat app frontend 
+//https://www.youtube.com/watch?v=9vxgxqlC6v0
+
+
+
+
+import io from "socket.io-client";
+
+
+import React, { useEffect, useState } from 'react';
+
+import { View, Text,Button, StyleSheet ,TextInput,SafeAreaView} from 'react-native';
+import socketServices from "./src/utils/SocketService";
+// import axios from 'axios';
+
+export default function App (){
+
+  const [data, setData] = useState([]);
+
+
+   const [message,setMessage]=useState('');
+   const [chatMessages,setChatMessages]=useState([]);
+  useEffect(() => {
+
+    socketServices.initialzeSocket();
+
+    console.log("App.js is console here and 1st useEffect is here = ")
+    // // fetchData();
+    // socket = io("http://127.0.0.1:3000");
+
+    //     socket.on("chat message", msg => {
+    //       // this.setState({ chatMessages: [...this.state.chatMessages, msg]
+    //         setChatMessages(msg)
+    //  });
+  }, []);
+
+
+  useEffect(()=>{
+     
+    console.log("App.js is console here and 2nd useEffect is here = ")
+    socketServices.on('receiveMessage',(msg)=>{
+      console.log("message received is =",msg)
+      let copy=[...data];
+      setData(copy.concat(msg))
+    })
+  },[data]
+
+  )
+  function sendMessage() {
+    // socket.emit('chat message', chatMessage);
+    // // this.setState({chatMessage: ''});
+    // setMessage("");
+  
+    console.log("message is here down");
+    console.log(message);
+    if(!!message){
+      console.log("after Entring if message is here down");
+      console.log(message);
+      socketServices.emit('sendMessage',message);
+      return;
+    }
+    alert("Please Enter some Text")
+  }
+
+  return (
+<>
+    <SafeAreaView style={{flex:1}}>
+      <View style={styles.container}>
+        <View  style={{flexDirection:'row',justifyContetnt:'space-between'}}> 
+<View style={{flex:0.8 }}>
+<TextInput placeholder="Ente you message..."
+style={styles.inputStyle}   value={message} onChangeText={Text=>setMessage(Text)}/>
+</View>
+<View style={{flex:0.8}}>
+<Button  onPress={sendMessage} title='send'/>
+</View>
+</View>
+{/* {data.map((val,i)=>{
+    return(
+      <Text >{val}</Text>)})} */}
+
+   {data}   
+  </View>
+</SafeAreaView>
+</>
+  );
+
+
+
+}; 
+
+const styles = StyleSheet.create({
+  container: {
+    // height: 400,
+    flex: 1,
+    // backgroundColor: '#F5FCFF',
+    padding:24,
+    paddingTop:'50px'
+  },
+inputStyle:{
+  height:42,
+  borderWidth:1,
+  borderRadius:6,
+  paddingHorizontal:8
+}
+
+
+
+
+
+});
+
+
+
+
+
+// export default function App (){
+
+//   const [data, setData] = useState([]);
+
+
+//    const [message,setMessage]=useState('');
+//    const [chatMessages,setChatMessages]=useState([]);
+//   useEffect(() => {
+
+//     socketServices.initialzeSocket();
+
+//     console.log("App.js is console here and 1st useEffect is here = ")
+//     // // fetchData();
+//     // socket = io("http://127.0.0.1:3000");
+
+//     //     socket.on("chat message", msg => {
+//     //       // this.setState({ chatMessages: [...this.state.chatMessages, msg]
+//     //         setChatMessages(msg)
+//     //  });
+//   }, []);
+
+
+//   useEffect(()=>{
+     
+//     console.log("App.js is console here and 2nd useEffect is here = ")
+//     socketServices.on('receiveMessage',(msg)=>{
+//       console.log("message received is =",msg)
+//       let copy=[...data];
+//       setData(copy.concat(msg))
+//     })
+//   },[data]
+
+//   )
+//   function sendMessage() {
+//     // socket.emit('chat message', chatMessage);
+//     // // this.setState({chatMessage: ''});
+//     // setMessage("");
+  
+//     console.log("message is here down");
+//     console.log(message);
+//     if(!!message){
+//       console.log("after Entring if message is here down");
+//       console.log(message);
+//       socketServices.emit('sendMessage',message);
+//       return;
+//     }
+//     alert("Please Enter some Text")
+//   }
+
+//   return (
+// <>
+//     <SafeAreaView style={{flex:1}}>
+//       <View style={styles.container}>
+//         <View  style={{flexDirection:'row',justifyContetnt:'space-between'}}> 
+// <View style={{flex:0.8 }}>
+// <TextInput placeholder="Ente you message..."
+// style={styles.inputStyle}   value={message} onChangeText={Text=>setMessage(Text)}/>
+// </View>
+// <View style={{flex:0.8}}>
+// <Button  onPress={sendMessage} title='send'/>
+// </View>
+// </View>
+// {/* {data.map((val,i)=>{
+//     return(
+//       <Text >{val}</Text>)})} */}
+
+//    {/* {data}    */}
+//   </View>
+// </SafeAreaView>
+// </>
+//   );
+
+
+
+// }; 
+
+// const styles = StyleSheet.create({
+//   container: {
+//     // height: 400,
+//     flex: 1,
+//     // backgroundColor: '#F5FCFF',
+//     padding:24,
+//     paddingTop:'50px'
+//   },
+// inputStyle:{
+//   height:42,
+//   borderWidth:1,
+//   borderRadius:6,
+//   paddingHorizontal:8
+// }
+
+
+
+
+
+//});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import io from "socket.io-client";
+import { useState } from "react";
+
+import React, { useEffect, useState } from 'react';
+
+import { View, Text,Button, StyleSheet } from 'react-native';
+
+// import axios from 'axios';
+
+export default function App (){
+
+  const [data, setData] = useState("hello hoor");
+
+
+   const [chatMessage,setMessage]=useState();
+   const [chatMessages,setChatMessages]=useState([]);
+  useEffect(() => {
+
+    // fetchData();
+    socket = io("http://127.0.0.1:3000");
+
+    socket.on("chat message", msg => {
+      // this.setState({ chatMessages: [...this.state.chatMessages, msg]
+        setChatMessages(msg)
+ });
+  }, []);
+
+
+  function submitChatMessage() {
+    socket.emit('chat message', chatMessage);
+    // this.setState({chatMessage: ''});
+    setMessage("");
+  }
+
+  return (
+<>
+    <View >
+{chatMessages.map(chatMessage => (
+      <Text style={{borderWidth: 2, top: 500}}>{chatMessage}</Text>
+    ))}
+      {/* <Text>{data}</Text> */}
+    </View>
+
+    <View style={styles.container}>
+        {chatMessages}
+        <TextInput
+          style={{height: 40, borderWidth: 2, top: 600}}
+          autoCorrect={false}
+          value={this.state.chatMessage}
+          onSubmitEditing={() => this.submitChatMessage()}
+          onChangeText={chatMessage => {
+            this.setState({chatMessage});
+          }}
+        />
+      </View>
+</>
+  );
+
+
+
+}; 
+
+const styles = StyleSheet.create({
+  container: {
+    height: 400,
+    flex: 1,
+    backgroundColor: '#F5FCFF',
+  },
+});
+
+
+
+
