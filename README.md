@@ -45,23 +45,14 @@
 
 <h5>Projet Visual overview</h5>
 
-</br>
+<img width="284" height="495" alt="Screenshot 2026-02-10 133313" src="https://github.com/user-attachments/assets/27bbdd86-faed-4ffe-9ea6-79eeaa850ab5" /> </br>
 
-<img width="284" height="495" alt="Screenshot 2026-02-10 133313" src="https://github.com/user-attachments/assets/27bbdd86-faed-4ffe-9ea6-79eeaa850ab5" />
+<img width="287" height="500" alt="Screenshot 2026-02-10 133106" src="https://github.com/user-attachments/assets/f0895d8f-38f7-43be-949c-493315e49788"/> </br>
 
-</br>
+<img width="282" height="487" alt="Screenshot 2026-02-18 161708" src="https://github.com/user-attachments/assets/4164641e-75df-4fc1-b8d7-557f5e99d86a" /> </br>
 
-<img width="287" height="500" alt="Screenshot 2026-02-10 133106" src="https://github.com/user-attachments/assets/f0895d8f-38f7-43be-949c-493315e49788" />
+<img width="286" height="388" alt="Screenshot 2026-02-10 133608" src="https://github.com/user-attachments/assets/ac41a185-0d1a-4a15-ba09-459cda04cbf7" /> </br>
 
-</br>
-<img width="282" height="457" alt="Screenshot 2026-02-10 133410" src="https://github.com/user-attachments/assets/35f1bd2c-669a-4113-8faa-\6
-
-  </br>
-
-
-<img width="286" height="388" alt="Screenshot 2026-02-10 133608" src="https://github.com/user-attachments/assets/ac41a185-0d1a-4a15-ba09-459cda04cbf7" />
-
-</br>
 
 
 
