@@ -22,6 +22,7 @@
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
+<a href="https://linkedin.com/in/https://www.linkedin.com/in/hoor-ul-ain-aa1558a6/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/hoor-ul-ain-aa1558a6/" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
@@ -34,13 +35,40 @@
 
 
 **🌍 </br>
-1)clone the project </br>
+1)clone the repository </br>
 2)Go on android studio and turn on the virtual device manager. After turning on the virtual device.</br>
 3)Go on the Vs code and type npm start</br>
 4)The project will run on android emulator </br>
 5)The project will run on android emulator**
 
 </p>
+
+<h5>Projet Visual overview</h5>
+
+</br>
+
+<img width="284" height="495" alt="Screenshot 2026-02-10 133313" src="https://github.com/user-attachments/assets/27bbdd86-faed-4ffe-9ea6-79eeaa850ab5" />
+
+</br>
+
+<img width="287" height="500" alt="Screenshot 2026-02-10 133106" src="https://github.com/user-attachments/assets/f0895d8f-38f7-43be-949c-493315e49788" />
+
+</br>
+<img width="282" height="457" alt="Screenshot 2026-02-10 133410" src="https://github.com/user-attachments/assets/35f1bd2c-669a-4113-8faa-\6
+
+  </br>
+
+  <img width="287" height="467" alt="Screenshot 2026-02-10 133522" src="https://github.com/user-attachments/assets/951133de-5118-482e-b18b-03585109a9c6" />
+
+  </br>
+<img width="286" height="388" alt="Screenshot 2026-02-10 133608" src="https://github.com/user-attachments/assets/ac41a185-0d1a-4a15-ba09-459cda04cbf7" />
+
+
+
+
+
+
+
 
 
 
