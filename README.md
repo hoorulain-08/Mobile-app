@@ -31,23 +31,14 @@
   🎯Running the Project </h4>
 
 <p>
-   **🌍</br> 
-1)clone the project  </br>
-2)Download the android studio </br>
-3)Go on android studio and turn on the virtual device manager. After turning on the virtual device. </br>
-4)Go on the Vs code and type npm start </br> 
-5)The project will run on android emulator** </br>
+
 
 **🌍 </br>
-1)User-posted international delivery requests.</br>
-2)Traveler matching based on route.</br>
-3)Secure communication between sender and traveler</br>
-4)Community-driven logistics model </br>
-5)Cost-effective alternative to cargo services**
-
-
-
-
+1)clone the project </br>
+2)Go on android studio and turn on the virtual device manager. After turning on the virtual device.</br>
+3)Go on the Vs code and type npm start</br>
+4)The project will run on android emulator </br>
+5)The project will run on android emulator**
 
 </p>
 
